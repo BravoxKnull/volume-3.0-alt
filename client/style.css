@@ -40,4 +40,14 @@ body {
     color: #00ff99;
     font-weight: bold;
   }
+  .voice-user {
+    animation: pulse 1.5s infinite;
+    color: green;
+  }
+  
+  @keyframes pulse {
+    0% { text-shadow: 0 0 5px green; }
+    50% { text-shadow: 0 0 15px lime; }
+    100% { text-shadow: 0 0 5px green; }
+  }
   
