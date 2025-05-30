@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Volume 3.0 - Voice Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Volume 3.0</h1>
+    <div id="selectName">
+      <p>Select Your Hacker Name:</p>
+      <select id="nameSelect">
+        <option value="BLAZEE HACK">BLAZEE HACK</option>
+        <option value="VELOZZZ HACK">VELOZZZ HACK</option>
+        <option value="FLAMEE HACK">FLAMEE HACK</option>
+        <option value="STEIKEE HACK">STEIKEE HACK</option>
+        <option value="RONINN HACK">RONINN HACK</option>
+      </select>
+      <button onclick="joinChannel()">Join DUNE PC</button>
+    </div>
+
+    <div id="chatRoom" class="hidden">
+      <h2>DUNE PC Channel</h2>
+      <p id="myName"></p>
+      <button onclick="toggleMic()">🎙️ Mic</button>
+      <button onclick="leaveChannel()">🚪 Leave</button>
+      <ul id="userList"></ul>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
