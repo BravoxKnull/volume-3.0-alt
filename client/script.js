@@ -60,3 +60,18 @@ socket.on("audio", ({ id, audio }) => {
     setTimeout(() => userElem.classList.remove("talking"), 1000);
   }
 });
+// Capture mic
+navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+.then(stream => {
+  myStream = stream;
+  // Add stream to peer connections
+})
+.catch(console.error);
+
+// On receiving stream from remote peer
+peer.on('stream', remoteStream => {
+  const audio = document.createElement('audio');
+  audio.srcObject = remoteStream;
+  audio.autoplay = true;
+  document.body.appendChild(audio);
+});
